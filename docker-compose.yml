@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  srceducativo:
+    image: ${DOCKER_REGISTRY-}srceducativo
+    build:
+      context: .\srcEducativo
+      dockerfile: Dockerfile
+
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .\API
+      dockerfile: Dockerfile
+
